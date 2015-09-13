@@ -12,6 +12,7 @@
 		40F49CBE1BA5CAC100990A90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40F49CBC1BA5CAC100990A90 /* Main.storyboard */; };
 		40F49CC01BA5CAC100990A90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40F49CBF1BA5CAC100990A90 /* Assets.xcassets */; };
 		40F49CC31BA5CAC100990A90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40F49CC11BA5CAC100990A90 /* LaunchScreen.storyboard */; };
+		40F49CCB1BA5D70B00990A90 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F49CCA1BA5D70B00990A90 /* GameController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		40F49CBF1BA5CAC100990A90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		40F49CC21BA5CAC100990A90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		40F49CC41BA5CAC100990A90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40F49CCA1BA5D70B00990A90 /* GameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				40F49CB81BA5CAC100990A90 /* AppDelegate.swift */,
 				40F49CBA1BA5CAC100990A90 /* ViewController.swift */,
 				40F49CBC1BA5CAC100990A90 /* Main.storyboard */,
+				40F49CCA1BA5D70B00990A90 /* GameController.swift */,
 				40F49CBF1BA5CAC100990A90 /* Assets.xcassets */,
 				40F49CC11BA5CAC100990A90 /* LaunchScreen.storyboard */,
 				40F49CC41BA5CAC100990A90 /* Info.plist */,
@@ -135,6 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				40F49CBB1BA5CAC100990A90 /* ViewController.swift in Sources */,
+				40F49CCB1BA5D70B00990A90 /* GameController.swift in Sources */,
 				40F49CB91BA5CAC100990A90 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
