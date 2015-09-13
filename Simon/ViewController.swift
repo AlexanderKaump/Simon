@@ -31,6 +31,8 @@ class ViewController: UIViewController {
     
     var blip: SystemSoundID = 0
     var explosion: SystemSoundID = 0
+    var count = 5
+    var myTimer:NSTimer?
     
     override func viewDidLoad() {
         let blipUrl = NSBundle.mainBundle().URLForResource("blip", withExtension: "wav")
@@ -86,7 +88,55 @@ class ViewController: UIViewController {
         }
         
         self.flashButton(sender)
-
+    }
+    
+    func killTimer()
+    {
+        self.count = 5
+        self.timerLabel.alpha = 0
+        self.timerLabel.text = "5"
+        self.myTimer?.invalidate()
+    }
+    
+    func startTimer()
+    {
+        self.killTimer()
+        self.timerLabel.alpha = 1
+        self.myTimer = NSTimer.scheduledTimerWithTimeInterval(1.0,
+        target: self,
+        selector: Selector("updateCountdownLabel"),
+        userInfo: nil,
+        repeats: true)
+    }
+    
+    func updateCountdownLabel()
+    {
+        self.timerLabel.text = String(--count)
+        
+        if (count == 0)
+        {
+            self.showGameOverScreen()
+            self.myTimer?.invalidate()
+        }
+    }
+    
+    func incrementTapCount()
+    {
+        let currentTapString = self.tapsLabel.text
+        let currentTapInt = Int(currentTapString!)
+        let newTapInt = currentTapInt! + 1
+        let newTapString = String(newTapInt)
+        self.tapsLabel.text = newTapString
+        
+    }
+    
+    func incrementRoundCount()
+    {
+        let currentRoundString = self.roundLabel.text
+        let currentRoundInt = Int(currentRoundString!)
+        let newRoundInt = currentRoundInt! + 1
+        let newRoundString = String(newRoundInt)
+        self.roundLabel.text = newRoundString
     }
 
     @IBAction func dismissGameOverScreen(sender: AnyObject) {
@@ -99,6 +149,10 @@ class ViewController: UIViewController {
                 dispatch_after(time, dispatch_get_main_queue())
                 {
                     self.gameController.startGame()
+                    self.tapsLabel.text = "0"
+                    self.roundLabel.text = "0"
+                    
+                    
                 }
         }
         
@@ -107,6 +161,10 @@ class ViewController: UIViewController {
     func showGameOverScreen()
     {
         self.playSound(self.explosion)
+        myTimer?.invalidate()
+        
+        
+        self.timerLabel.alpha = 0
         
         UIView.animateWithDuration(0.3, animations: { () -> Void in
             self.startGameView.alpha = 1
@@ -116,7 +174,10 @@ class ViewController: UIViewController {
     
     func showSequence(sequence: [Int]) {
         
-        for (var i = 0; i < sequence.count; i++) {
+        self.timerLabel.alpha = 0
+        
+        for (var i = 0; i < sequence.count; i++)
+        {
             let number = sequence[i]
             let button = self.buttonOfNumber(number)!
             
@@ -126,6 +187,14 @@ class ViewController: UIViewController {
                 self.flashButton(button)
             }
         }
+        
+        let delay = 0.5 * Double(sequence.count) * Double(NSEC_PER_SEC)
+        let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+        dispatch_after(time, dispatch_get_main_queue()) {
+            self.startTimer()
+
+        }
+
     }
     
     func buttonOfNumber(number: Int) -> UIButton? {

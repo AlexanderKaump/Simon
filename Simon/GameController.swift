@@ -30,14 +30,18 @@ class GameController
             runningArray = []
             generatedArray.append(self.randomButton())
             
+            self.viewController?.killTimer()
+            
             let delay = 1.0 * Double(NSEC_PER_SEC)
             let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
             dispatch_after(time, dispatch_get_main_queue())
             {
-                self.viewController?.showSequence(generatedArray)
+                self.viewController?.showSequence(self.generatedArray)
+                self.viewController!.incrementRoundCount()
             }
 
         }
+        self.viewController!.incrementTapCount()
     }
     
     func randomButton() ->Int
@@ -53,6 +57,7 @@ class GameController
         generatedArray.append(self.randomButton())
 
         self.viewController?.showSequence(generatedArray)
+        self.viewController!.incrementRoundCount()
     }
 
     func validateArrays() -> Bool {
