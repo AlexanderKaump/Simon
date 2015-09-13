@@ -31,7 +31,7 @@ class ViewController: UIViewController {
             print("1")
         } else if (sender == button2) {
             print("2")
-        }
+        } 
         
         //etc
     }
