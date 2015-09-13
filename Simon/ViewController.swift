@@ -33,6 +33,7 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         gameController = GameController()
+        gameController.viewController = self
         super.viewWillAppear(animated)
     }
     
@@ -88,6 +89,62 @@ class ViewController: UIViewController {
             self.gameController.startGame()
         }
         
+    }
+    
+    func showSequence(sequence: [Int]) {
+        
+        for (var i = 0; i < sequence.count; i++) {
+            let number = sequence[i]
+            let button = self.buttonOfNumber(number)!
+            
+            let delay = 0.5 * Double(i) * Double(NSEC_PER_SEC)
+            let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+            dispatch_after(time, dispatch_get_main_queue()) {
+                self.flashButton(button)
+            }
+        }
+    }
+    
+    func buttonOfNumber(number: Int) -> UIButton? {
+        
+        if (number == 1)
+        {
+            return self.button1
+        }
+        else if (number == 2)
+        {
+            return self.button2
+        }
+        else if (number == 3)
+        {
+            return self.button3
+        }
+        else if (number == 4)
+        {
+            return self.button4
+        }
+        else if (number == 5)
+        {
+            return self.button5
+        }
+        else if (number == 6)
+        {
+            return self.button6
+        }
+        else if (number == 7)
+        {
+            return self.button7
+        }
+        else if (number == 8)
+        {
+            return self.button8
+        }
+        else if (number == 9)
+        {
+            return self.button9
+        }
+        
+        return nil
     }
     
     func flashButton(button: UIButton) {

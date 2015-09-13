@@ -13,8 +13,8 @@ class GameController
     
     var viewController : ViewController?
     
-    var generatedArray = []
-    var runningArray = []
+    var generatedArray: [Int] = []
+    var runningArray: [Int] = []
     
     func processInput(parameter:Int)
     {
@@ -31,7 +31,11 @@ class GameController
     func startGame()
     {
         generatedArray.append(self.randomButton())
-        print(generatedArray)
+        generatedArray.append(self.randomButton())
+        generatedArray.append(self.randomButton())
+        generatedArray.append(self.randomButton())
+        generatedArray.append(self.randomButton())
+        self.viewController?.showSequence(generatedArray)
     }
 
     func validateArrays() -> Bool {
