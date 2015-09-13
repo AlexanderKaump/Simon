@@ -11,7 +11,7 @@ import Foundation
 class GameController
 {
     
-    var generatedArray = []
+    var generatedArray: [Int] = []
     var runningArray: [Int] = []
     
     func processInput(parameter:Int)
@@ -21,20 +21,15 @@ class GameController
         print(runningArray)
     }
     
-    func randomButton()
+    func randomButton() ->Int
     {
-        var i = 1
-        while i <= 10
-        {
-            let random = arc4random_uniform(9) + 1
-            print(random)
-            i = i + 1
-        }
+        return Int(arc4random_uniform(9)) + 1
     }
 
-    func initialize()
+    func startGame()
     {
-        
+        generatedArray.append(self.randomButton())
+        print(generatedArray)
     }
 
     
