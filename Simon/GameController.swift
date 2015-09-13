@@ -18,9 +18,26 @@ class GameController
     
     func processInput(parameter:Int)
     {
-        print (runningArray)
         runningArray.append(parameter)
-        print(runningArray)
+        let isValid = self.validateArrays()
+        if(!isValid)
+        {
+            viewController?.showGameOverScreen()
+            return
+        }
+        if(runningArray.count == generatedArray.count)
+        {
+            runningArray = []
+            generatedArray.append(self.randomButton())
+            
+            let delay = 1.0 * Double(NSEC_PER_SEC)
+            let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+            dispatch_after(time, dispatch_get_main_queue())
+            {
+                self.viewController?.showSequence(generatedArray)
+            }
+
+        }
     }
     
     func randomButton() ->Int
@@ -30,18 +47,23 @@ class GameController
 
     func startGame()
     {
+        generatedArray = []
+        runningArray = []
+        
         generatedArray.append(self.randomButton())
-        generatedArray.append(self.randomButton())
-        generatedArray.append(self.randomButton())
-        generatedArray.append(self.randomButton())
-        generatedArray.append(self.randomButton())
+
         self.viewController?.showSequence(generatedArray)
     }
 
     func validateArrays() -> Bool {
-        
-       return true
-        
+        for (var i = 0; i < runningArray.count; i++)
+        {
+            if(runningArray[i] != generatedArray[i])
+            {
+                return false
+            }
+        }
+        return true
     }
 }
 
