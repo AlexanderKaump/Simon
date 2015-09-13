@@ -22,7 +22,13 @@ class GameController
 
     func randomButton()
     {
-        
+        var i = 1
+        while i <= 10
+        {
+            let random = arc4random_uniform(9) + 1
+            print(random)
+            i = i + 1
+        }
     }
 
     func initialize()
