@@ -86,9 +86,23 @@ class ViewController: UIViewController {
         UIView.animateWithDuration(0.3, animations: { () -> Void in
             self.startGameView.alpha = 0
             }) { (coplete) -> Void in
-            self.gameController.startGame()
+                let delay = 0.5 * Double(NSEC_PER_SEC)
+                let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+                dispatch_after(time, dispatch_get_main_queue())
+                {
+                    self.gameController.startGame()
+                }
         }
         
+    }
+    
+    func showGameOverScreen()
+    {
+        
+        UIView.animateWithDuration(0.3, animations: { () -> Void in
+            self.startGameView.alpha = 1
+            }) { (coplete) -> Void in
+        }
     }
     
     func showSequence(sequence: [Int]) {
