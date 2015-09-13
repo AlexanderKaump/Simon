@@ -66,7 +66,8 @@ class ViewController: UIViewController {
         {
             gameController.processInput(9)
         }
-
+        
+        self.flashButton(sender)
 
     }
 
