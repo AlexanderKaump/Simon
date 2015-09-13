@@ -22,12 +22,21 @@ class ViewController: UIViewController {
     @IBOutlet weak var button9: UIButton!
     @IBOutlet weak var startGameView: UIView!
     
+    @IBOutlet weak var tapsLabel: UILabel!
+    @IBOutlet weak var timerLabel: UILabel!
+    @IBOutlet weak var roundLabel: UILabel!
+    
+    
     var gameController : GameController = GameController()
-    var mySound: SystemSoundID = 0
+    
+    var blip: SystemSoundID = 0
+    var explosion: SystemSoundID = 0
     
     override func viewDidLoad() {
-        let soundURL = NSBundle.mainBundle().URLForResource("blip", withExtension: "wav")
-        AudioServicesCreateSystemSoundID(soundURL!, &self.mySound)
+        let blipUrl = NSBundle.mainBundle().URLForResource("blip", withExtension: "wav")
+        let explosionUrl = NSBundle.mainBundle().URLForResource("explosion", withExtension: "wav")
+        AudioServicesCreateSystemSoundID(blipUrl!, &self.blip)
+        AudioServicesCreateSystemSoundID(explosionUrl!, &self.explosion)
         super.viewDidLoad()
     }
     
@@ -38,7 +47,6 @@ class ViewController: UIViewController {
     }
     
     @IBAction func processButtonTap(sender: UIButton) {
-        
         
         if (sender == button1)
         {
@@ -98,6 +106,7 @@ class ViewController: UIViewController {
     
     func showGameOverScreen()
     {
+        self.playSound(self.explosion)
         
         UIView.animateWithDuration(0.3, animations: { () -> Void in
             self.startGameView.alpha = 1
@@ -174,11 +183,11 @@ class ViewController: UIViewController {
         })
         
         //play a sound
-        self.playSound()
+        self.playSound(self.blip)
     }
     
-    func playSound() {
-        AudioServicesPlaySystemSound(self.mySound)
+    func playSound(sound: SystemSoundID) {
+        AudioServicesPlaySystemSound(sound)
     }
     
     override func prefersStatusBarHidden() -> Bool {
