@@ -111,7 +111,7 @@
                                 <subviews>
                                     <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w3w-hT-Eyz">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="180"/>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.96862751245498657" green="0.15294118225574493" blue="0.9647059440612793" alpha="1" colorSpace="deviceRGB"/>
                                         <connections>
                                             <action selector="processButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7fY-FF-Ssx"/>
                                         </connections>
@@ -165,7 +165,7 @@
                                 <subviews>
                                     <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l2X-Lg-ZWy">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="180"/>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.9960784912109375" green="0.95686280727386475" blue="0.21176472306251526" alpha="1" colorSpace="deviceRGB"/>
                                         <connections>
                                             <action selector="processButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R45-ZN-ksD"/>
                                         </connections>
@@ -223,63 +223,15 @@
                                     <constraint firstItem="Oi3-Ph-Qom" firstAttribute="centerY" secondItem="1EL-nH-J5N" secondAttribute="centerY" id="xrH-Uc-yjD"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sAP-C3-ekN" userLabel="Start Game View">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <subviews>
-                                    <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gAz-Wa-owG">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pU5-jN-7GA">
-                                        <rect key="frame" x="150" y="150" width="300" height="300"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O81-a3-gUJ">
-                                                <rect key="frame" x="0.0" y="239" width="300" height="61"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                <state key="normal" title="Start Again"/>
-                                                <connections>
-                                                    <action selector="dismissGameOverScreen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bBW-PH-dVF"/>
-                                                </connections>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Game Over" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7bk-vy-Pe2">
-                                                <rect key="frame" x="25" y="20" width="250" height="43"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="skull2" translatesAutoresizingMaskIntoConstraints="NO" id="6tM-Jy-TdY">
-                                                <rect key="frame" x="30" y="86" width="240" height="128"/>
-                                            </imageView>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="300" id="7ka-83-saF"/>
-                                            <constraint firstAttribute="height" constant="300" id="8V3-ph-oRA"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="gAz-Wa-owG" secondAttribute="trailing" id="5kq-1K-7jo"/>
-                                    <constraint firstItem="gAz-Wa-owG" firstAttribute="leading" secondItem="sAP-C3-ekN" secondAttribute="leading" id="Dna-dz-Jru"/>
-                                    <constraint firstItem="pU5-jN-7GA" firstAttribute="centerY" secondItem="sAP-C3-ekN" secondAttribute="centerY" id="HT8-6d-bmX"/>
-                                    <constraint firstAttribute="bottom" secondItem="gAz-Wa-owG" secondAttribute="bottom" id="MSf-tE-aqq"/>
-                                    <constraint firstItem="pU5-jN-7GA" firstAttribute="centerX" secondItem="sAP-C3-ekN" secondAttribute="centerX" id="WOL-Ae-gch"/>
-                                    <constraint firstItem="gAz-Wa-owG" firstAttribute="top" secondItem="sAP-C3-ekN" secondAttribute="top" id="trS-MS-05K"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="PxI-i9-vVB" firstAttribute="leading" secondItem="vws-Fd-qHS" secondAttribute="trailing" id="39n-PF-wke"/>
                             <constraint firstItem="oHH-TJ-goO" firstAttribute="width" secondItem="sdJ-qn-m6e" secondAttribute="width" id="3hh-g0-LZF"/>
                             <constraint firstItem="gPx-fI-ml7" firstAttribute="leading" secondItem="PxI-i9-vVB" secondAttribute="trailing" id="4jE-wR-gmm"/>
-                            <constraint firstItem="sAP-C3-ekN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="63k-vi-Jj4"/>
                             <constraint firstItem="vws-Fd-qHS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8eM-w7-Jbp"/>
                             <constraint firstItem="0Eo-wf-X5u" firstAttribute="leading" secondItem="sdJ-qn-m6e" secondAttribute="trailing" id="A1y-o3-yaP"/>
                             <constraint firstItem="59A-Aa-yXX" firstAttribute="top" secondItem="sdJ-qn-m6e" secondAttribute="bottom" id="ACl-vZ-edW"/>
-                            <constraint firstAttribute="trailing" secondItem="sAP-C3-ekN" secondAttribute="trailing" id="ATv-cD-ACt"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="sAP-C3-ekN" secondAttribute="bottom" id="Ahh-QE-wQs"/>
-                            <constraint firstItem="sAP-C3-ekN" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Hl7-fC-4Vc"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="PxI-i9-vVB" secondAttribute="bottom" constant="60" id="JKk-K4-gl4"/>
                             <constraint firstItem="1EL-nH-J5N" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="JSH-al-hLR"/>
                             <constraint firstItem="gPx-fI-ml7" firstAttribute="width" secondItem="sdJ-qn-m6e" secondAttribute="width" id="Ki4-CM-inQ"/>
@@ -336,6 +288,51 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="sAP-C3-ekN" userLabel="Start Game View">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gAz-Wa-owG">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pU5-jN-7GA">
+                            <rect key="frame" x="150" y="150" width="300" height="300"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O81-a3-gUJ">
+                                    <rect key="frame" x="0.0" y="239" width="300" height="61"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                    <state key="normal" title="Start Again"/>
+                                    <connections>
+                                        <action selector="dismissGameOverScreen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bBW-PH-dVF"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Game Over" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7bk-vy-Pe2">
+                                    <rect key="frame" x="25" y="20" width="250" height="43"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="skull2" translatesAutoresizingMaskIntoConstraints="NO" id="6tM-Jy-TdY">
+                                    <rect key="frame" x="30" y="86" width="240" height="128"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="300" id="7ka-83-saF"/>
+                                <constraint firstAttribute="height" constant="300" id="8V3-ph-oRA"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="gAz-Wa-owG" secondAttribute="trailing" id="5kq-1K-7jo"/>
+                        <constraint firstItem="gAz-Wa-owG" firstAttribute="leading" secondItem="sAP-C3-ekN" secondAttribute="leading" id="Dna-dz-Jru"/>
+                        <constraint firstItem="pU5-jN-7GA" firstAttribute="centerY" secondItem="sAP-C3-ekN" secondAttribute="centerY" id="HT8-6d-bmX"/>
+                        <constraint firstAttribute="bottom" secondItem="gAz-Wa-owG" secondAttribute="bottom" id="MSf-tE-aqq"/>
+                        <constraint firstItem="pU5-jN-7GA" firstAttribute="centerX" secondItem="sAP-C3-ekN" secondAttribute="centerX" id="WOL-Ae-gch"/>
+                        <constraint firstItem="gAz-Wa-owG" firstAttribute="top" secondItem="sAP-C3-ekN" secondAttribute="top" id="trS-MS-05K"/>
+                    </constraints>
+                </view>
             </objects>
             <point key="canvasLocation" x="438" y="417"/>
         </scene>
