@@ -25,7 +25,16 @@ class ViewController: UIViewController {
 
     }
     
-    
+    @IBAction func processButtonTap(sender: UIButton) {
+        
+        if (sender == button1) {
+            print("1")
+        } else if (sender == button2) {
+            print("2")
+        }
+        
+        //etc
+    }
 
 }
 
