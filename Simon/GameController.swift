@@ -15,9 +15,9 @@ class GameController
     var runningArray = []
 
     
-    func processInput()
+    func processInput(parameter:Int)
     {
-        
+        print (parameter)
     }
 
     func randomButton()

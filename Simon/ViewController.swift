@@ -27,13 +27,46 @@ class ViewController: UIViewController {
     
     @IBAction func processButtonTap(sender: UIButton) {
         
-        if (sender == button1) {
-            print("1")
-        } else if (sender == button2) {
-            print("2")
-        }
+        let gameController = GameController()
         
-        //etc
+        if (sender == button1)
+        {
+            gameController.processInput(1)
+        }
+        else if (sender == button2)
+        {
+            gameController.processInput(2)
+        }
+        else if (sender == button3)
+        {
+            gameController.processInput(3)
+        }
+        else if (sender == button4)
+        {
+            gameController.processInput(4)
+        }
+        else if (sender == button5)
+        {
+            gameController.processInput(5)
+        }
+        else if (sender == button6)
+        {
+            gameController.processInput(6)
+        }
+        else if (sender == button7)
+        {
+            gameController.processInput(7)
+        }
+        else if (sender == button8)
+        {
+            gameController.processInput(8)
+        }
+        else if (sender == button9)
+        {
+            gameController.processInput(9)
+        }
+
+
     }
 
 }
