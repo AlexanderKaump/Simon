@@ -20,15 +20,16 @@ class ViewController: UIViewController {
     @IBOutlet weak var button7: UIButton!
     @IBOutlet weak var button8: UIButton!
     @IBOutlet weak var button9: UIButton!
+    @IBOutlet weak var startGameView: UIView!
+    var gameController : GameController = GameController()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
+    override func viewWillAppear(animated: Bool) {
+        gameController = GameController()
+        
     }
     
     @IBAction func processButtonTap(sender: UIButton) {
         
-        let gameController = GameController()
         
         if (sender == button1)
         {
@@ -71,6 +72,16 @@ class ViewController: UIViewController {
 
     }
 
+    @IBAction func dismissGameOverScreen(sender: AnyObject) {
+        
+        UIView.animateWithDuration(0.3, animations: { () -> Void in
+            self.startGameView.alpha = 0
+            }) { (coplete) -> Void in
+                
+        }
+        
+    }
+    
     func flashButton(button: UIButton) {
             
         button.alpha = 1
