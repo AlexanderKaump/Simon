@@ -85,7 +85,7 @@ class ViewController: UIViewController {
         UIView.animateWithDuration(0.3, animations: { () -> Void in
             self.startGameView.alpha = 0
             }) { (coplete) -> Void in
-                
+            self.gameController.startGame()
         }
         
     }

@@ -18,23 +18,20 @@ class GameController
     
     func processInput(parameter:Int)
     {
-        print (parameter)
+        print (runningArray)
+        runningArray.append(parameter)
+        print(runningArray)
+    }
+    
+    func randomButton() ->Int
+    {
+        return Int(arc4random_uniform(9)) + 1
     }
 
-    func randomButton()
+    func startGame()
     {
-        var i = 1
-        while i <= 10
-        {
-            let random = arc4random_uniform(9) + 1
-            print(random)
-            i = i + 1
-        }
-    }
-
-    func initialize()
-    {
-        
+        generatedArray.append(self.randomButton())
+        print(generatedArray)
     }
 
     func validateArrays() -> Bool {
