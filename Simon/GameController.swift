@@ -12,14 +12,15 @@ class GameController
 {
     
     var generatedArray = []
-    var runningArray = []
-
+    var runningArray: [Int] = []
     
     func processInput(parameter:Int)
     {
-        print (parameter)
+        print (runningArray)
+        runningArray.append(parameter)
+        print(runningArray)
     }
-
+    
     func randomButton()
     {
         var i = 1
