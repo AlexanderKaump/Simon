@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
@@ -34,7 +35,32 @@ class ViewController: UIViewController {
         }
         
         //etc
+        
+        self.flashButton(sender)
     }
 
+    func flashButton(button: UIButton) {
+            
+        button.alpha = 1
+        
+        UIView.animateWithDuration(0.5, animations: { () -> Void in
+            
+            button.alpha = 0.5
+            
+            }, completion: { (complete) -> Void in
+                
+        })
+        
+        //play a sound
+        self.playSound()
+    }
+    
+    func playSound() {
+        
+        let soundURL = NSBundle.mainBundle().URLForResource("blip", withExtension: "wav")
+        var mySound: SystemSoundID = 0
+        AudioServicesCreateSystemSoundID(soundURL!, &mySound)
+        AudioServicesPlaySystemSound(mySound);
+    }
 }
 
