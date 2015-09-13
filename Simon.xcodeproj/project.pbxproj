@@ -13,6 +13,7 @@
 		40F49CC01BA5CAC100990A90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40F49CBF1BA5CAC100990A90 /* Assets.xcassets */; };
 		40F49CC31BA5CAC100990A90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40F49CC11BA5CAC100990A90 /* LaunchScreen.storyboard */; };
 		40F49CCB1BA5D70B00990A90 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F49CCA1BA5D70B00990A90 /* GameController.swift */; settings = {ASSET_TAGS = (); }; };
+		AC68D6371BA5F302000114FF /* blip.wav in Resources */ = {isa = PBXBuildFile; fileRef = AC68D6361BA5F302000114FF /* blip.wav */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +21,11 @@
 		40F49CB81BA5CAC100990A90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		40F49CBA1BA5CAC100990A90 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		40F49CBD1BA5CAC100990A90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		40F49CBF1BA5CAC100990A90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		40F49CBF1BA5CAC100990A90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Simon/Assets.xcassets; sourceTree = "<group>"; };
 		40F49CC21BA5CAC100990A90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		40F49CC41BA5CAC100990A90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40F49CCA1BA5D70B00990A90 /* GameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
+		AC68D6361BA5F302000114FF /* blip.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = blip.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +44,8 @@
 			children = (
 				40F49CB71BA5CAC100990A90 /* Simon */,
 				40F49CB61BA5CAC100990A90 /* Products */,
+				40F49CBF1BA5CAC100990A90 /* Assets.xcassets */,
+				AC68D6361BA5F302000114FF /* blip.wav */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,7 +64,6 @@
 				40F49CBA1BA5CAC100990A90 /* ViewController.swift */,
 				40F49CBC1BA5CAC100990A90 /* Main.storyboard */,
 				40F49CCA1BA5D70B00990A90 /* GameController.swift */,
-				40F49CBF1BA5CAC100990A90 /* Assets.xcassets */,
 				40F49CC11BA5CAC100990A90 /* LaunchScreen.storyboard */,
 				40F49CC41BA5CAC100990A90 /* Info.plist */,
 			);
@@ -127,6 +130,7 @@
 				40F49CC31BA5CAC100990A90 /* LaunchScreen.storyboard in Resources */,
 				40F49CC01BA5CAC100990A90 /* Assets.xcassets in Resources */,
 				40F49CBE1BA5CAC100990A90 /* Main.storyboard in Resources */,
+				AC68D6371BA5F302000114FF /* blip.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +293,7 @@
 				40F49CC91BA5CAC100990A90 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
