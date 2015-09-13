@@ -11,9 +11,10 @@ import Foundation
 class GameController
 {
     
+    var viewController : ViewController?
+    
     var generatedArray = []
     var runningArray = []
-
     
     func processInput(parameter:Int)
     {
@@ -36,6 +37,10 @@ class GameController
         
     }
 
-    
+    func validateArrays() -> Bool {
+        
+       return true
+        
+    }
 }
 

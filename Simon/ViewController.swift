@@ -21,11 +21,19 @@ class ViewController: UIViewController {
     @IBOutlet weak var button8: UIButton!
     @IBOutlet weak var button9: UIButton!
     @IBOutlet weak var startGameView: UIView!
+    
     var gameController : GameController = GameController()
+    var mySound: SystemSoundID = 0
+    
+    override func viewDidLoad() {
+        let soundURL = NSBundle.mainBundle().URLForResource("blip", withExtension: "wav")
+        AudioServicesCreateSystemSoundID(soundURL!, &self.mySound)
+        super.viewDidLoad()
+    }
     
     override func viewWillAppear(animated: Bool) {
         gameController = GameController()
-        
+        super.viewWillAppear(animated)
     }
     
     @IBAction func processButtonTap(sender: UIButton) {
@@ -99,11 +107,11 @@ class ViewController: UIViewController {
     }
     
     func playSound() {
-        
-        let soundURL = NSBundle.mainBundle().URLForResource("blip", withExtension: "wav")
-        var mySound: SystemSoundID = 0
-        AudioServicesCreateSystemSoundID(soundURL!, &mySound)
-        AudioServicesPlaySystemSound(mySound);
+        AudioServicesPlaySystemSound(self.mySound)
+    }
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return true
     }
 }
 
