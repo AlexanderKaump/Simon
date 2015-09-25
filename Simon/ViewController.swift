@@ -240,12 +240,15 @@ class ViewController: UIViewController {
     }
     
     func flashButton(button: UIButton) {
-            
-        button.alpha = 1
+        
+        //get the button's sibling view
+        let sibling = button.superview?.subviews.first
+        
+        sibling?.alpha = 1
         
         UIView.animateWithDuration(0.5, animations: { () -> Void in
             
-            button.alpha = 0.5
+            sibling?.alpha = 0.5
             
             }, completion: { (complete) -> Void in
                 
