@@ -46,8 +46,8 @@ class GameController
     
     func randomButton() ->Int
     {
-        return Int(arc4random_uniform(2)) + 1
-//        return Int(arc4random_uniform(9)) + 1
+ //       return Int(arc4random_uniform(2)) + 1
+       return Int(arc4random_uniform(9)) + 1
     }
 
     func startGame()
