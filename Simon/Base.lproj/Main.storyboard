@@ -67,12 +67,12 @@
                                     <constraint firstItem="qKA-FZ-mws" firstAttribute="top" secondItem="0Eo-wf-X5u" secondAttribute="top" id="ytD-rw-wLX"/>
                                 </constraints>
                             </view>
-                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B9a-Sq-0PM">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B9a-Sq-0PM">
                                 <rect key="frame" x="400" y="0.0" width="200" height="180"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6M9-WA-zXW">
+                                    <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6M9-WA-zXW">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="180"/>
-                                        <color key="backgroundColor" red="0.84705882349999995" green="0.69988368109999999" blue="0.35897247700000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.5058823823928833" green="0.49803924560546875" blue="0.13333334028720856" alpha="1" colorSpace="deviceRGB"/>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lXD-T6-j3Y">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="180"/>
@@ -95,7 +95,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="59A-Aa-yXX">
                                 <rect key="frame" x="0.0" y="180" width="200" height="180"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mfR-31-Vq0">
+                                    <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mfR-31-Vq0">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="180"/>
                                         <color key="backgroundColor" red="0.12941176470588237" green="0.55294117647058827" blue="0.3843137254901961" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
@@ -117,10 +117,10 @@
                                     <constraint firstItem="FRG-XS-wKa" firstAttribute="top" secondItem="59A-Aa-yXX" secondAttribute="top" id="xEn-TU-UW4"/>
                                 </constraints>
                             </view>
-                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7T0-X2-86A">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7T0-X2-86A">
                                 <rect key="frame" x="200" y="180" width="200" height="180"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0S3-sk-AGJ">
+                                    <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0S3-sk-AGJ">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="180"/>
                                         <color key="backgroundColor" red="0.84313725490000002" green="0.035294117649999998" blue="0.015686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
@@ -145,7 +145,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oHH-TJ-goO">
                                 <rect key="frame" x="400" y="180" width="200" height="180"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jZW-9G-rqz">
+                                    <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jZW-9G-rqz">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="180"/>
                                         <color key="backgroundColor" red="0.94901960784313721" green="0.0" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
@@ -170,7 +170,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vws-Fd-qHS">
                                 <rect key="frame" x="0.0" y="360" width="200" height="180"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aOQ-2l-kVh">
+                                    <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aOQ-2l-kVh">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="180"/>
                                         <color key="backgroundColor" red="0.039215686274509803" green="0.32941176470588235" blue="0.61176470588235299" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
@@ -207,7 +207,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PxI-i9-vVB">
                                 <rect key="frame" x="200" y="360" width="200" height="180"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a2P-bf-P8K">
+                                    <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a2P-bf-P8K">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="180"/>
                                         <color key="backgroundColor" red="0.46274509800000002" green="0.73333333329999995" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
@@ -232,9 +232,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gPx-fI-ml7">
                                 <rect key="frame" x="400" y="360" width="200" height="180"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bJt-Ph-CNU">
+                                    <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bJt-Ph-CNU">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="180"/>
-                                        <color key="backgroundColor" red="0.99607849120000003" green="0.95686280729999995" blue="0.2117647231" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="backgroundColor" red="0.094117656350135803" green="0.074509806931018829" blue="0.29803922772407532" alpha="1" colorSpace="deviceRGB"/>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l2X-Lg-ZWy">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="180"/>
