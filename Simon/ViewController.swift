@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var tapsLabel: UILabel!
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var roundLabel: UILabel!
-    
+      
     
     var gameController : GameController = GameController()
     
