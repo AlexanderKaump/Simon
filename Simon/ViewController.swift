@@ -33,7 +33,7 @@ class ViewController: UIViewController {
     var blip: SystemSoundID = 0
     var explosion: SystemSoundID = 0
     var count = 5
-    var myTimer:NSTimer?   
+    var myTimer:NSTimer?
     
     override func viewDidLoad() {
         let blipUrl = NSBundle.mainBundle().URLForResource("blip", withExtension: "wav")
